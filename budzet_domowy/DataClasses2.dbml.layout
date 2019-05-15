@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses2">
+  <DataContextMoniker Name="/DataClasses2DataContext" />
+  <nestedChildShapes>
+    <classShape Id="8e3cfd5e-dd9a-4aa7-b32f-501b60aec9c3" absoluteBounds="1, 1.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClasses2DataContext/forma_platnosci" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6de9d118-3db2-4b64-9aa4-51f2528da40d" absoluteBounds="1.0150000000000001, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f836e5f6-8ab6-4896-af26-d511e015cad6" absoluteBounds="3.75, 3, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses2DataContext/kategoria" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a1f9344-0599-4b32-83ac-f1fb19e122a0" absoluteBounds="3.7649999999999997, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.45242346379207 : 4.57859537760417); (4.45242346379207 : 4.82859537760417); (5.06174684745593 : 4.82859537760417); (5.06174684745593 : 4.57859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses2DataContext/kategoria/kategoria_kategoria" />
+      <nodes>
+        <classShapeMoniker Id="f836e5f6-8ab6-4896-af26-d511e015cad6" />
+        <classShapeMoniker Id="f836e5f6-8ab6-4896-af26-d511e015cad6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9ba438fc-e38f-4f90-80d6-acbfe3ef3259" absoluteBounds="6.25, 1.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClasses2DataContext/operacje" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c27bdc99-45f2-42f1-8349-d1b380b892f9" absoluteBounds="6.265, 2.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 2.38389322916667); (6.25 : 2.38389322916667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/forma_platnosci/forma_platnosci_operacje" />
+      <nodes>
+        <classShapeMoniker Id="8e3cfd5e-dd9a-4aa7-b32f-501b60aec9c3" />
+        <classShapeMoniker Id="9ba438fc-e38f-4f90-80d6-acbfe3ef3259" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 3.51524983723958); (6.25 : 3.51524983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/kategoria/kategoria_operacje" />
+      <nodes>
+        <classShapeMoniker Id="f836e5f6-8ab6-4896-af26-d511e015cad6" />
+        <classShapeMoniker Id="9ba438fc-e38f-4f90-80d6-acbfe3ef3259" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0e6f3ca5-2b82-4bf6-b2de-86997fefda69" absoluteBounds="3.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses2DataContext/uzytkownicy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cfbca37-534b-4192-853f-c29c3429926d" absoluteBounds="3.5149999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.1874995); (7.25 : 1.1874995); (7.25 : 1.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/uzytkownicy/uzytkownicy_operacje" />
+      <nodes>
+        <classShapeMoniker Id="0e6f3ca5-2b82-4bf6-b2de-86997fefda69" />
+        <classShapeMoniker Id="9ba438fc-e38f-4f90-80d6-acbfe3ef3259" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
