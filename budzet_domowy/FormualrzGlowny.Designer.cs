@@ -522,11 +522,13 @@
             this.LV_operacje.GridLines = true;
             this.LV_operacje.HideSelection = false;
             this.LV_operacje.Location = new System.Drawing.Point(0, 0);
+            this.LV_operacje.MultiSelect = false;
             this.LV_operacje.Name = "LV_operacje";
             this.LV_operacje.Size = new System.Drawing.Size(1141, 408);
             this.LV_operacje.TabIndex = 4;
             this.LV_operacje.UseCompatibleStateImageBehavior = false;
             this.LV_operacje.View = System.Windows.Forms.View.Details;
+            this.LV_operacje.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LV_operacje_MouseDoubleClick);
             // 
             // columnHeaderID
             // 

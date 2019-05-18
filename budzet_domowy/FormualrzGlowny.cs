@@ -111,7 +111,7 @@ namespace budzet_domowy
             chart3.Series["s1"].Points.Clear();
 
                 var operation = DBaccess.GetOperationWithCategory(chk_daty, chk_kategorie, chk_uzytkownicy.Select(s => int.Parse(s)).ToList());
-            var sumaPrzychody = operation.Where(x => x.Typ.Equals("przychod")).Sum(x => x.Kwota);
+                var sumaPrzychody = operation.Where(x => x.Typ.Equals("przychod")).Sum(x => x.Kwota);
                 var sumaWydatki = operation.Where(x => x.Typ.Equals("wydatek")).Sum(x => x.Kwota);
 
                 chart3.Series["s1"].Points.AddXY("Wydatki - " + sumaWydatki, sumaWydatki);
@@ -172,7 +172,6 @@ namespace budzet_domowy
  ;
             if (rows.Count > 0)
             {
-                
                 var row = rows[0];
                 var a = row.SubItems[1];
                 int x = Int32.Parse(rows[0].SubItems[0].Text);
@@ -507,6 +506,24 @@ namespace budzet_domowy
             ChartPie();
             LineChart();
             ColumnChart();
+        }
+
+        private void LV_operacje_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var rows = LV_operacje.SelectedItems;
+            ;
+            if (rows.Count > 0)
+            {
+                var row = rows[0];
+                var a = row.SubItems[1];
+                int x = Int32.Parse(rows[0].SubItems[0].Text);
+                AddEditOperationForm.SetEditedItem(x);
+                AddEditOperationForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Musisz najpierw wybrać operacje!");
+            }
         }
     }
 }

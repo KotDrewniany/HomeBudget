@@ -135,6 +135,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="uc_dodaj_kategorie.resx">
       <DependentUpon>uc_dodaj_kategorie.cs</DependentUpon>
@@ -207,6 +208,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>baza_danych.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\exclamation-40026_960_720.png" />
+    <None Include="Resources\punkt-czerwony-wykrzyknik-okragly-przycisk-160-3397650.jpg" />
+    <None Include="Resources\wykrzyknik %281%29.png" />
+    <None Include="Resources\Wykrzyknik.jpg" />
+    <None Include="Resources\Wykrzyknik.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

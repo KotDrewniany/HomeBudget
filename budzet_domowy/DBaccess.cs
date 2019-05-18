@@ -13,19 +13,18 @@ namespace budzet_domowy
 
         public static IEnumerable<GetOperationWithCategoryDTO> GetOperationWithCategory()
         {
-
             return from o in db.operacje
-                   join category in db.kategoria on o.id_kategoria equals category.id_kategoria
-                   select new GetOperationWithCategoryDTO()
-                   {
-                       Id = category.id_kategoria,
-                       Nazwa = category.nazwa,
-                       Id_nad = category.id_nadkategoria,
-                       Typ = category.typ,
-                       Kwota = o.kwota,
-                       Data = o.data,
-                       UserId = o.id_uzytkownika,
-                   };
+                join category in db.kategoria on o.id_kategoria equals category.id_kategoria
+                select new GetOperationWithCategoryDTO()
+                {
+                    Id = category.id_kategoria,
+                    Nazwa = category.nazwa,
+                    Id_nad = category.id_nadkategoria,
+                    Typ = category.typ,
+                    Kwota = o.kwota,
+                    Data = o.data,
+                    UserId = o.id_uzytkownika,
+                };
         }
         public static IEnumerable<GetOperationWithCategoryDTO> GetOperationWithCategory(List<DateTime> chk_daty, List<string> chk_kategorie, List<int> chk_uzytkownicy)
         {
@@ -35,7 +34,7 @@ namespace budzet_domowy
                 where chk_kategorie.Contains(k_pod.nazwa)
                       && chk_daty.Contains(o.data.Date)
                       && chk_uzytkownicy.Contains(o.id_uzytkownika)
-                   select new GetOperationWithCategoryDTO()
+                select new GetOperationWithCategoryDTO()
                 {
                     Id = k_pod.id_kategoria,
                     Nazwa = k_pod.nazwa,
